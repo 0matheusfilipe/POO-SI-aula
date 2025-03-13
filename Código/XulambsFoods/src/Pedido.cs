@@ -70,5 +70,10 @@ namespace XulambsFoods_2025_1.src {
             relat.AppendLine("==============================");
             return relat.ToString();
         }
+
+        public int GetID()
+        {
+            return _idPedido;
+        }
     }
 }
