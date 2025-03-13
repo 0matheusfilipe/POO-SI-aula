@@ -61,7 +61,12 @@ namespace XulambsFoods_2025_1.src {
         }
 
         public string Relatorio() {
-            StringBuilder relat = new StringBuilder($"Pedido nº{_idPedido:D2} - {_data}\n");
+            StringBuilder relat = new StringBuilder($"Pedido nº{_idPedido:D2} - {_data} - ");
+            string estado = "FECHADO";
+            if (_aberto)
+                estado = "ABERTO";
+            relat.AppendLine(estado);
+
             relat.AppendLine("==============================");
             for (int i = 0; i < _quantPizzas; i++) {
                 relat.AppendLine($"{(i+1):D2} - {_pizzas[i].NotaDeCompra():C2}");
