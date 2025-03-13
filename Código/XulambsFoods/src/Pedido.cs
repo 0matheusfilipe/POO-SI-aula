@@ -64,7 +64,7 @@ namespace XulambsFoods_2025_1.src {
             StringBuilder relat = new StringBuilder($"Pedido nº{_idPedido:D2} - {_data}\n");
             relat.AppendLine("==============================");
             for (int i = 0; i < _quantPizzas; i++) {
-                relat.AppendLine($"{(i+1):D2} -{_pizzas[i].NotaDeCompra():C2}");
+                relat.AppendLine($"{(i+1):D2} - {_pizzas[i].NotaDeCompra():C2}");
             }
             relat.AppendLine($"\nValor a pagar: {PrecoAPagar():C2}");
             relat.AppendLine("==============================");
