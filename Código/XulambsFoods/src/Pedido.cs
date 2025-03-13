@@ -24,9 +24,21 @@ namespace XulambsFoods_2025_1.src {
             _aberto = true;
         }
 
+        /// <summary>
+        /// Construtor. Crioa um édido aberto e vazio.
+        /// </summary>
+
         private bool PodeAdicionar() {
             return _aberto;
         }
+
+        /// <summary>
+        /// Adiciona uma pizza ao pedido, caso ele esteja aberto. 
+        /// Caso contrário, ignora a operação.
+        /// Retorna a quantidade de pizzas no pedido ao fim da execução.
+        /// </summary>
+        /// <param name="pizza">A pizza a ser incluída no pedido.</param>
+        /// <returns>Quantidade de pizzas no pedido após a execução.</returns>
 
         public int Adicionar(Pizza pizza) {
             if (PodeAdicionar()) {
